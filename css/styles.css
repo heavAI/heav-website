@@ -12,6 +12,10 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--bg-gradient);
   color: var(--text-color);
@@ -54,7 +58,7 @@ header {
 .logo img {
   width: 40px;
   margin-right: 10px;
-  animation: rotateDiamond 2s ease 5;
+  animation: rotateDiamond 2s ease infinite;
 }
 
 @keyframes rotateIn {
