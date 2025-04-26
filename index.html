@@ -121,13 +121,26 @@
   <div id="google_translate_element" style="display: none;"></div>
   
   <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  <script src="js/translate.js"></script>
   <script>
     // heav lab toggle
     const toggleLab = document.getElementById('toggleLab');
     const labWidget = document.getElementById('heav-lab-widget');
     toggleLab.addEventListener('click', () => {
       labWidget.classList.toggle('lab-open');
+    });
+
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+    document.getElementById("languageSelector").addEventListener("change", function () {
+      var lang = this.value;
+      if (lang) {
+        var selectField = document.querySelector(".goog-te-combo");
+        if (selectField) {
+          selectField.value = lang;
+          selectField.dispatchEvent(new Event("change"));
+        }
+      }
     });
   </script>
 </body>
