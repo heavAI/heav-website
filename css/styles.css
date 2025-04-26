@@ -171,3 +171,36 @@ footer {
     margin-top: 15px;
   }
 }
+
+/* Hide the Google Translate top bar */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-menu-value span,
+.goog-logo-link,
+.goog-te-gadget span {
+  display: none !important;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+#custom-translate {
+  position: fixed;
+  top: 100px;
+  right: 10px;
+  z-index: 9999;
+  padding: 5px;
+  background:#000000;
+  font-family: sans-serif;
+}
+
+select {
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 3px;
+}

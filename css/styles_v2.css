@@ -1,0 +1,261 @@
+:root {
+  --bg-gradient: linear-gradient(145deg, #0d0d0d, #2c2c2c);
+  --text-color: #f1f1f1;
+  --accent: #aaaaaa;
+  --highlight: #ffffff;
+  --primary: #FF5722;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: var(--text-color);
+  overflow-x: hidden;
+  animation: fadeIn 1.5s ease-in;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 60px;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 10px;
+  animation: rotateDiamond 2s linear infinite;
+}
+
+@keyframes rotateDiamond {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+nav a {
+  color: var(--accent);
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+}
+
+nav a:hover {
+  color: var(--highlight);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section {
+  padding: 100px 60px;
+  min-height: 100vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  color: var(--accent);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-desc {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: var(--accent);
+}
+
+.services-list, .contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: var(--accent);
+}
+
+.community-section {
+  display: flex;
+  justify-content: center;
+}
+
+.community-card {
+  background: #222;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.community-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+#custom-translate {
+  position: fixed;
+  top: 140px;
+  right: 15px;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 9999;
+}
+
+#custom-translate select {
+  background: transparent;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#custom-translate:hover select {
+  cursor: pointer;
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0px !important;
+}
+
+/* Heav Lab Widget */
+#heav-lab-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+
+#heav-lab-widget button {
+  background: var(--primary);
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+#heav-lab-widget .lab-content {
+  display: none;
+  padding: 20px;
+}
+
+#heav-lab-widget.lab-open .lab-content {
+  display: block;
+}
+
+.lab-image {
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 15px;
+  }
+}
+
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+.btn-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+  

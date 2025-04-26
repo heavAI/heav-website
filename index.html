@@ -14,7 +14,7 @@
   <header>
     <div class="logo">
       <img src="images/logo.png" alt="heav Logo">
-      <h2>heav</h2>
+      <h2 class="notranslate">heav</h2>
     </div>
     <nav>
       <a href="#home">Home</a>
@@ -67,6 +67,27 @@
   <footer>
     &copy; 2025 heav. All rights reserved.
   </footer>
+
+  <!-- Translator -->
+  <div id="custom-translate" class="notranslate">
+    <label for="languageSelector" class="translate-label">
+      🌐
+    </label>
+    <select id="languageSelector" class="notranslate">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="es">Español</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="hi">हिन्दी</option>
+      <option value="ml">മലയാളം</option>
+      <option value="zh-CN">中文</option>
+    </select>    
+  </div>
+  <!-- Hidden Google Translate element -->
+  <div id="google_translate_element" style="display: none;"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script src="js/translate.js"></script>
 </body>
 
 </html>
