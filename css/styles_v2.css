@@ -3,7 +3,7 @@
   --text-color: #f1f1f1;
   --accent: #aaaaaa;
   --highlight: #ffffff;
-  --primary: #FF5722;
+  --primary: #840bda;
 }
 
 * {
@@ -33,6 +33,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 100;
+  padding-right: 170px;
 }
 
 .logo {
@@ -172,7 +173,7 @@ footer {
 
 #custom-translate {
   position: fixed;
-  top: 140px;
+  top: 13px;
   right: 15px;
   background: #1a1a1a;
   padding: 10px;
@@ -229,6 +230,7 @@ body {
 #heav-lab-widget .lab-content {
   display: none;
   padding: 20px;
+  max-width: 500px;
 }
 
 #heav-lab-widget.lab-open .lab-content {
@@ -259,4 +261,84 @@ button:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
-  
+
+/* Chatbot Styles */
+#heav-chatbot {
+  position: fixed;
+  bottom: 90px; /* Slightly above the heav lab button */
+  right: 20px;
+  z-index: 9998;
+}
+
+#chatbotToggle {
+  background: var(--primary);
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.chatbot-window {
+  display: none;
+  background: #1a1a1a;
+  color: var(--text-color);
+  border-radius: 15px;
+  width: 320px;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.05);
+  margin-top: 10px;
+  scroll-behavior: smooth;
+}
+
+.chatbot-open .chatbot-window {
+  display: block;
+}
+
+.chat-header {
+  background: var(--primary);
+  padding: 12px 20px;
+  font-weight: bold;
+  color: #fff;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.chat-body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message.bot, .message.user {
+  background: #2a2a2a;
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: var(--primary);
+  color: #fff;
+}
+
+.options button {
+  background: #333;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.options button:hover {
+  background: var(--primary);
+}
