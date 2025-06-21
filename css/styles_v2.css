@@ -1,12 +1,12 @@
 :root {
-  --bg-gradient: linear-gradient(135deg, #181c2b 0%, #232946 50%, #1a1a2e 100%);
+  --bg-gradient: linear-gradient(135deg, #181c2b 0%, #232946 80%, #121212 100%);
   --text-color: #f1f1f1;
-  --accent: #aaaaaa;
+  --accent: #8ab4f8;
   --highlight: #ffffff;
-  --primary: #840bda;
-  --primary-dark: #5a189a;
+  --primary: #43a047;
+  --primary-dark: #1b5e20;
   --secondary: #232946;
-  --surface: #22223b;
+  --surface: #232946;
 }
 
 * {
@@ -34,13 +34,17 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 18px 40px 18px 60px;
-  background: rgba(24, 28, 43, 0.92);
+  background: rgba(24, 28, 43, 0.96);
   border-bottom: 1.5px solid #232323;
   position: sticky;
   top: 0;
   z-index: 100;
   padding-right: 170px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.12);
+}
+
+header, header * {
+  color: #fff !important;
 }
 
 .logo {
@@ -82,9 +86,9 @@ section {
   padding: 80px 24px 60px 24px;
   max-width: 1200px;
   margin: 0 auto;
-  background: linear-gradient(120deg, #232946 60%, #1a1a2e 100%);
+  background: rgba(35, 41, 70, 0.98);
   border-radius: 18px;
-  box-shadow: 0 8px 32px rgba(36, 37, 64, 0.13);
+  box-shadow: 0 8px 32px rgba(132, 11, 218, 0.13);
 }
 
 .home {
@@ -94,7 +98,7 @@ section {
   align-items: center;
   text-align: center;
   min-height: 70vh;
-  background: linear-gradient(120deg, #232946 60%, #5a189a22 100%);
+  background: linear-gradient(120deg, #232946 60%, #181c2b 100%);
   border-radius: 18px;
   box-shadow: 0 8px 32px rgba(132,11,218,0.07);
   margin-top: 30px;
@@ -105,7 +109,7 @@ section {
 .home h1 {
   font-size: 3.2rem;
   font-weight: 700;
-  color: var(--primary);
+  color: #fff !important;
   margin-bottom: 18px;
   letter-spacing: 0.03em;
 }
@@ -135,7 +139,7 @@ section {
 }
 
 .card {
-  background: linear-gradient(120deg, #232946 80%, #5a189a11 100%);
+  background: linear-gradient(120deg, #232946 80%, #181c2b 100%);
   border: 1.5px solid #232323;
   box-shadow: 0 4px 24px rgba(132,11,218,0.04);
   padding: 36px 28px 32px 28px;
@@ -150,7 +154,7 @@ section {
 
 .card h3 {
   font-size: 1.35rem;
-  color: var(--primary);
+  color: var(--accent);
   margin-bottom: 10px;
   font-weight: 700;
 }
@@ -171,7 +175,7 @@ section {
   content: attr(data-icon);
   font-size: 2.1rem;
   margin-bottom: 12px;
-  color: var(--primary);
+  color: var(--accent);
   display: block;
   position: absolute;
   top: 24px;
@@ -183,7 +187,7 @@ section {
 /* About, Community, Contact, Support */
 .section-title {
   font-size: 2.2rem;
-  color: var(--primary);
+  color: #fff !important;
   font-weight: 700;
   margin-bottom: 18px;
 }
@@ -199,7 +203,7 @@ section {
 }
 
 .community-card {
-  background: linear-gradient(120deg, #232946 80%, #5a189a11 100%);
+  background: linear-gradient(120deg, #232946 80%, #181c2b 100%);
   border: 1.5px solid #232323;
   box-shadow: 0 4px 24px rgba(132,11,218,0.04);
   border-radius: 16px;
@@ -212,7 +216,7 @@ section {
 }
 
 .community-card h3 {
-  color: var(--primary);
+  color: var(--accent);
   font-size: 1.25rem;
   font-weight: 700;
 }
@@ -258,7 +262,7 @@ section {
 }
 
 .btn-primary:hover {
-  background: #a45be7;
+  background: var(--primary-dark);
   transform: scale(1.07);
   box-shadow: 0 6px 18px #840bda33;
 }
